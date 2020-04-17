@@ -1,0 +1,46 @@
+<form>
+    <p>Recuerde que debe ingresar la cantidad de iteraciones que desea, la serie siempre inicia desde 1</p>
+    <div class="form-group">
+        <label for="numero">ingrese A</label>
+        <input type="number" [(ngModel)]="this.A " name="A" class="form-control" id="A" placeholder="cantidad">
+        <label for="numero">ingrese B</label>
+        <input type="number" [(ngModel)]="this.B" name="B" class="form-control" id="B" placeholder="cantidad">
+        <label for="numero">ingrese C</label>
+        <input type="number" [(ngModel)]="this.C" name="C" class="form-control" id="C" placeholder="cantidad">
+        <!-- <span *ngIf="error" style="font-weight: 500; position: absolute; color:red;">el maximo permitido es 1000</span> -->
+        <button type="button" class="btn btn-primary" style="margin-top: 30px;" (click)="ecuacion()">Calcular</button>
+    </div>
+
+</form>
+<div style="max-height: 250px; overflow: auto;">
+    <p *ngFor="let item of resultado">{{item.number}}</p>
+</div>
+
+<div class="form-group">
+    <label for="numero">Resultado X1:</label>
+    <input type="number" [(ngModel)]="this.x1" name="x1" class="form-control" id="x1" placeholder="cantidad" disabled>
+    <label for="numero">Resultado X2:</label>
+    <input type="number" [(ngModel)]="this.x2" name="x2" class="form-control" id="x2" placeholder="cantidad" disabled>
+</div>
+<canvas id="lienzo" width="400px" height="400px">
+
+</canvas>
+
+<iframe src="https://phet.colorado.edu/sims/calculus-grapher/calculus-grapher_es.html" width="800" height="600"
+    scrolling="no" allowfullscreen></iframe>
+<!-- <canvas class="graficot" id="lienzo" width="400px" height="400px">
+
+</canvas> -->
+
+
+<!-- <form action="#" name="rellenar">
+    <h3>Ingrese las variables:</h3>
+    <div id="variables">
+        <p><input type="text" size="2" id="vc" name="vc" onchange="return validanumero(this)">
+             X<sup>2</sup>+
+            <input type="text" size="2" id="vl" name="vl" onchange="return validanumero(this)"> 
+            X+
+            <input type="text" size="2" id="vi" name="vi" onchange="return validanumero(this)">=0</p>
+    </div>
+    <h1><input type="button" value="Calcular" onclick="ecuacion()"></h1>
+</form> -->

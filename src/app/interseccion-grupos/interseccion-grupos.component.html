@@ -1,0 +1,28 @@
+<form>
+    <p>gripos</p>
+    <p>Recuerde que debe ingresar la cantidad de iteraciones que desea, la serie siempre inicia desde 1</p>
+
+    <div class="form-group">
+        <label for="numero">Cantidad de grupos a crear</label>
+        <input type="number" name="numero" autocomplete="off" [(ngModel)]="numeroDeGrupos" class="form-control" id="numero"
+            placeholder="cantidad">
+        <button type="button" class="btn btn-primary" style="margin-top: 30px;" (click)="crear()">Crear</button>
+    </div>
+
+    <label for="grupo" class="mt-">Selecccione el grupo a llenar</label>
+    <select name="grupo" class="form-control form-control-lg" (change)="addForGroup($event)">
+        <option *ngFor="let item of this.arrayGrupos; let i=index" value="{{i}}">{{item.grupo}}</option>
+    </select>
+
+    <div class="form-group">
+        <label for="numero">Agregue los elemntos del grupo cada dato debe ir separado por coma ','</label>
+        <input type="number" name="numero" [(ngModel)]="elemntos" class="form-control" id="numero"
+            placeholder="cantidad">
+        <button type="button" class="btn btn-primary" style="margin-top: 30px;" (click)="anadir()">Crear</button>
+    </div>
+
+    <!-- <span *ngIf="error" style="font-weight: 500; position: absolute; color:red;">el maximo permitido es 1000</span> -->
+</form>
+<!-- <div style="max-height: 250px; overflow: auto;">
+    <p *ngFor="let item of resultado">{{item.number}}</p>
+</div> -->
