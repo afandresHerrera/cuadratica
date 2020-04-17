@@ -1,11 +1,11 @@
 <form>
     <p>Recuerde que debe ingresar la cantidad de iteraciones que desea, la serie siempre inicia desde 1</p>
     <div class="form-group">
-        <label for="numero">ingrese A</label>
+        <label for="numero">ingrese A (x^2)</label>
         <input type="number" [(ngModel)]="this.A " name="A" class="form-control" id="A" placeholder="cantidad">
-        <label for="numero">ingrese B</label>
+        <label for="numero">ingrese B (x)</label>
         <input type="number" [(ngModel)]="this.B" name="B" class="form-control" id="B" placeholder="cantidad">
-        <label for="numero">ingrese C</label>
+        <label for="numero">ingrese C (n)</label>
         <input type="number" [(ngModel)]="this.C" name="C" class="form-control" id="C" placeholder="cantidad">
         <!-- <span *ngIf="error" style="font-weight: 500; position: absolute; color:red;">el maximo permitido es 1000</span> -->
         <button type="button" class="btn btn-primary" style="margin-top: 30px;" (click)="ecuacion()">Calcular</button>
